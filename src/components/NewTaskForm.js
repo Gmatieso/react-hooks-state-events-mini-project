@@ -1,6 +1,10 @@
-import React from "react";
+import React, {useState} from "react";
 
-function NewTaskForm() {
+function NewTaskForm({onTaskFormSubmit, categories}) {
+// setting our text state 
+const [text,setText] = useState("")
+// setting our category state 
+const [category,setCategory] = useState("code")
   return (
     <form className="new-task-form">
       <label>
